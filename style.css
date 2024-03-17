@@ -189,7 +189,9 @@ section {
   gap: 5rem;
   height: 80vh;
 }
-
+section > p {
+  margin: 0;
+}
 .section__pic-container {
   display: flex;
   height: 400px;

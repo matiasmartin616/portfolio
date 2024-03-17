@@ -33,11 +33,11 @@
       <div class="logo">Matías Martín</div>
       <div>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Clients</a></li>
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#clients" onclick="toggleMenu()">Clients</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -51,9 +51,9 @@
         </div>
         <ul class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#clients" onclick="toggleMenu()">Clients</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </ul>
       </div>
@@ -102,7 +102,8 @@
         <div class="" style="display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
         justify-items: center;
-        justify-content: center;">
+        justify-content: center;
+        gap: 20px;">
           <div class="details-container color-container" style="max-width: 350px;">
             <div class="article-container">
               <img
@@ -210,7 +211,7 @@
         background-image: url('./assets/about-pic.png');
         background-repeat: no-repeat;
         background-position: 100% 0;
-        background-size: 30vw;">
+        background-size: 25vw;">
       <p class="section__text__p1" style="display: block;">Get To Know More</p>
       <h1 class="title" style="margin-bottom: 40px; display: block;">About Me</h1>
       <div class="section-container" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
@@ -234,11 +235,25 @@
               <h3 style="margin-bottom: 20px;">Experience</h3>
               <div style="text-align: left; margin-bottom: 10px;">
                 <h4>Hiberus 04/22 - 07/23</h4>
-                <p>Web Development using Javascript & PHP</p>
+                <p>Web Development using Javascript & PHP <br>
+                  <small>
+                    - Polyvalence<br>
+                    - PHP & Javascript & SQL<br>
+                    - Deployment with ubuntu server<br>
+                    - API Rest & MVC<br>
+                    - Translating client requirements into programming tasks<br>
+                  </small></p>
               </div>
               <div style="text-align: left; margin-bottom: 10px;">
                 <h4>Ayesa 11/23 - Now</h4>
-                <p>JavaScript Developer</p>
+                <p>JavaScript Developer <br>
+                  <small>
+                    - JavaScript & Frameworks <br>
+                    - SQL<br>
+                    - Agile Kanban Methodology<br>
+                    - Team Collaboration & Coordination<br>
+                    - Energy sector
+                  </small></p>
               </div>
             </div>
             <div class="details-container" style="min-width: 300px; max-width: 350px; background-color:rgba(255, 255, 255, 0.534);">
@@ -479,11 +494,11 @@
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#clients">Clients</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#clients" onclick="toggleMenu()">Clients</a></li>
+            <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
           </ul>
         </div>
       </nav>
