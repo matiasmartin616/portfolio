@@ -4,9 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Matias Martin - Web Developer</title>
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+   
   </head>
   <body>
     <nav id="desktop-nav">
@@ -15,8 +35,9 @@
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#skills">Clients</a></li>
         </ul>
       </div>
     </nav>
@@ -28,12 +49,13 @@
           <span></span>
           <span></span>
         </div>
-        <div class="menu-links">
+        <ul class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
+        </ul>
       </div>
     </nav>
     <section id="profile">
@@ -43,7 +65,7 @@
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Matías Martín</h1>
-        <p class="section__text__p2">Web Developer</p>
+        <p class="section__text__p2" ><span id="webDevSpan">Web Developer</span></p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -51,7 +73,7 @@
           >
             Download CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          <button class="btn btn-color-1" onclick="location.href='#contact'">
             Contact Info
           </button>
         </div>
@@ -66,65 +88,195 @@
             src="./assets/github.png"
             alt="My Github profile"
             class="icon"
-            onclick="location.href='https://github.com/'"
+            onclick="location.href='https://github.com/matiasmartin616'"
           />
         </div>
       </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
+    <section id="projects" style="margin-top: 100px; display: flex; 
+    flex-direction: column;
+    height: fit-content;  ">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title" style="margin-bottom: 40px;">Projects</h1>
+      <div class="experience-details-container" >
+        <div class="" style="display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
+        justify-items: center;
+        justify-content: center;">
+          <div class="details-container color-container" style="max-width: 350px;">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.webp"
+                alt="Project 1"
+                class="project-img"
+                style="max-height: 160px; align-self: center; justify-self: center;"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Findjobs app</h2>
+            <div style="text-align: left; margin-bottom: 20px;">
+              <p >
+                Discover a seamless way to post, search, and manage job offers. Our platform connects employers and job seekers with advanced tools for an efficient job market experience.
+              </p>
+              <br/>
+              <p>
+                User: findjobs@test.com 
+                <br/>
+                Pass: 123456 
+              </p>
+              <br/>
+              <small><p>App is sleeping. Refresh if 502 error appears.</p></small>
+            </div>
+            <div class="btn-container">
+              <a
+                href="https://github.com/matiasmartin616/findjobs"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-color-2 project-btn"
+              >
+                Github
+              </a>
+              <a
+                href="https://findjobs-production-feae.up.railway.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-color-2 project-btn"
+              >
+                Live Demo
+              </a>
+            </div>
+          </div>
+          <div class="details-container color-container" style="max-width: 350px;">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.webp"
+                alt="Project 1"
+                class="project-img"
+                style="max-height: 160px; align-self: center; justify-self: center;"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Film Society</h2>
+            <div style="text-align: left; margin-bottom: 20px;">
+              <p >
+                "Film Social Network" is a vibrant online community where movie enthusiasts from around the globe connect to share reviews, discover new films, and discuss all things cinema.
+              </p>
+            </div>
+            
+            <div class="btn-container">
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-color-2 project-btn"
+                style="text-decoration: none;"
+              >
+                💼 Work in progress 👨‍🏭
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
+      </div>
+    </section>
+    <section id="clients" style="margin-top: 100px;">
+      <p class="section__text__p1">Success stories</p>
+      <h1 class="title" style="margin-bottom: 40px;">Clients</h1>
+      <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="owl-carousel testimonial-carousel position-relative" style=" max-width: 400px; margin: 0 auto;">
+                <div class="testimonial-item text-center">
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="assets/tarti-logo.jpeg" style="width: 180px; height: 180px;">
+                    <h5 class="mb-0">Tarti tailored</h5>
+                    <p>E-commerce</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Developed a bespoke e-commerce platform for Tarti Tailored Brand, enhancing online shopping with a personalized user experience.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="assets/TALLER-AMEZCUA-LOGO.webp" style="width: 180px; height: 180px;">
+                    <h5 class="mb-0">Taller Amezcua</h5>
+                    <p>Landing page</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Developed a sleek, user-friendly landing page for TALLER AMEZCUA, enhancing their online presence with a focus on their specialized truck repair services</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section id="about" style="
+        margin-top: 100px; 
+        height: fit-content; 
+        display: flex; 
+        flex-direction: column; 
+        background-image: url('./assets/about-pic.png');
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        background-size: 30vw;">
+      <p class="section__text__p1" style="display: block;">Get To Know More</p>
+      <h1 class="title" style="margin-bottom: 40px; display: block;">About Me</h1>
+      <div class="section-container" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <div class="text-container" style="width: 70vw; max-width: 500px; background-color: rgba(255, 255, 255, 0.781); border-radius: 8px;">
+          <p style="line-height: 30px; margin: 0; ">
+            Passionate 🖥️ Software Developer, particularly skilled in JavaScript and PHP. I have been delving into the world of technology and programming since 2013. Education from a bilingual school (2003-2018),  I view myself as a versatile individual, passionately committed to leveraging technology for the betterment of others.
+          </p>
+        </div>
+        <div class="about-details-container" style="width: 80%; margin: 0 auto;">
+          <div class="about-containers" style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+          gap: 20px;
+          justify-items: center;">
+            <div class="details-container" style="min-width: 300px; max-width: 350px; background-color:rgba(255, 255, 255, 0.534);">
               <img
                 src="./assets/experience.png"
                 alt="Experience icon"
                 class="icon"
               />
-              <h3>Experience</h3>
-              <p>1+ year <br />Web Development using Javascript & PHP</p>
+              <h3 style="margin-bottom: 20px;">Experience</h3>
+              <div style="text-align: left; margin-bottom: 10px;">
+                <h4>Hiberus 04/22 - 07/23</h4>
+                <p>Web Development using Javascript & PHP</p>
+              </div>
+              <div style="text-align: left; margin-bottom: 10px;">
+                <h4>Ayesa 11/23 - Now</h4>
+                <p>JavaScript Developer</p>
+              </div>
             </div>
-            <div class="details-container">
+            <div class="details-container" style="min-width: 300px; max-width: 350px; background-color:rgba(255, 255, 255, 0.534);">
               <img
                 src="./assets/education.png"
                 alt="Education icon"
                 class="icon"
               />
-              <h3>Education</h3>
-              <p>Higher Degree<br />M.Sc. Masters Degree</p>
+              <h3 style="margin-bottom: 20px;">Education</h3>
+              <div style="text-align: left; margin-bottom: 10px;">
+                <h4>Universidad Complutense de Madrid 2018 - 2020</h4>
+                <p>Double degree program in Computer Engineering and Business Administration</p>
+              </div>
+              <div style="text-align: left; margin-bottom: 10px;">
+                <h4>Instituto Medac 2020-2022</h4>
+                <p>Higher Degree in Web Application Development</p>
+              </div>
+              <div style="text-align: left; margin-bottom: 40px;">
+                <h4>PUE DATA, Open Bootcamp</h4>
+                <p>Over 300 hours in certified Front courses (JS, react, ANGULAR)</p>
+              </div>
+
+              <button
+                class="btn btn-color-2"
+                onclick="window.open('./assets/CV_Matias_Martin.pdf')"
+              >
+                See more
+              </button>
             </div>
           </div>
-          <div class="text-container">
-            <p>
-              As a technologically savvy software developer with a strong foundation in JavaScript, 
-              PHP, and SQL, I thrive on embracing new challenges and adapting to the fast-paced
-              world of technology. In my first year of professional experience, I have proven my
-              ability to effectively maintain and develop web applications. My English communication skills
-              allow me to collaborate seamlessly with colleagues and clients. Passion for continuous 
-              learning and growth.
-            </p>
-          </div>
+          
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
     </section>
-    <section id="experience">
+    
+    <section id="skills" style="height: fit-content;">
       <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
+      <h1 class="title">Skills</h1>
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container">
@@ -133,7 +285,7 @@
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Skills icon"
                   class="icon"
                 />
                 <div>
@@ -185,9 +337,20 @@
                   <p>Basic</p>
                 </div>
               </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Next.js</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
             </div>
           </div>
-          <div class="details-container">
+          <div class="details-container" >
             <h2 class="experience-sub-title">Backend Development</h2>
             <div class="article-container">
               <article>
@@ -225,120 +388,90 @@
               </article>
             </div>
           </div>
+          
         </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
+        <div class="details-container">
+          <h2 class="experience-sub-title">General skills </h2>
+          <div class="article-container" id="generalSkills" >
+            <article>
               <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
+                src="./assets/checkmark.png"
+                alt="Skills icon"
+                class="icon"
               />
-            </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
+              <div>
+                <h3>Polyvalence</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
               <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
               />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
+              <div>
+                <h3>Professionalism</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
               <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
               />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
+              <div>
+                <h3>Agile Kanban</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Organized</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article style="min-width: fit-content;">
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Analyze client requirements</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
     </section>
-    <section id="contact">
+    
+    <section id="contact" style="margin-top: 80px; height: fit-content;">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
+      <div class="contact-info-upper-container" style="justify-content: start; gap:20px" >
+        <div class="contact-info-container" style="padding: 10px;">
           <img
             src="./assets/email.png"
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:matias.martin.contacto@gmail.com">matias.martin.contacto@gmail.com</a></p>
+          <p style="margin: 0; padding: 0;"><a href="mailto:matias.martin.contacto@gmail.com">matias.martin.contacto@gmail.com</a></p>
         </div>
-        <div class="contact-info-container">
+        <div class="contact-info-container"  style="padding: 10px; padding-left: 14px;">
           <img
             src="./assets/linkedin.png"
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
-          <p><a href="https://www.linkedin.com/in/matías-martín-0754b026b">LinkedIn</a></p>
+          <p style="margin: 0; padding: 0;"><a href="https://www.linkedin.com/in/matías-martín-0754b026b">LinkedIn</a></p>
         </div>
       </div>
     </section>
@@ -349,12 +482,25 @@
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#clients">Clients</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
       <p>Copyright &#169; 2023 Matías Martín. All Rights Reserved.</p>
     </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

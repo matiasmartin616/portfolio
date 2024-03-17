@@ -8,7 +8,8 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
+  color: rgb(22, 22, 22) !important;
 }
 
 html {
@@ -162,6 +163,26 @@ section {
 
 /* PROFILE SECTION */
 
+#webDevSpan{
+  display: block;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 15ch;
+  animation: typing 2s steps(15), blink .5s infinite step-end alternate, hideCursor 0.01s 2s forwards;
+  overflow: hidden;
+}
+
+@keyframes typing{
+  from { width: 0 }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+@keyframes hideCursor {
+  to { border-color: transparent; }
+}
 #profile {
   display: flex;
   justify-content: center;
@@ -207,6 +228,42 @@ section {
   justify-content: center;
   margin-top: 1rem;
   gap: 1rem;
+}
+
+/* CLIENTS */
+.testimonial-carousel .owl-item .testimonial-text,
+.testimonial-carousel .owl-item.center .testimonial-text * {
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text {
+    background: rgb(54, 54, 54) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text * {
+    color: #FFFFFF !important;
+}
+
+.testimonial-carousel .owl-dots {
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #CCCCCC;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    background: rgb(54, 54, 54);
+    border-color: rgb(54, 54, 54);
 }
 
 /* ICONS */
@@ -335,22 +392,28 @@ section {
   justify-content: center;
   flex-direction: column;
 }
-
+#generalSkills{
+  max-width: 90%; 
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+}
 .article-container {
   margin: 0;
   padding: 0;
   display: grid;
   width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  gap: 10px;
   justify-content: center;
   text-align: initial;
 }
 
 article {
   display: flex;
-  width: 10rem;
-  justify-content: space-around;
+  width: 15rem;
+  /* justify-content: space-around; */
   gap: 0.5rem;
 }
 
