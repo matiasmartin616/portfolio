@@ -9,7 +9,6 @@
 }
 
 @media screen and (max-width: 1300px) {
-  
   #generalSkills{
     max-width: 100%; 
     margin: 0 auto;
@@ -52,24 +51,13 @@
   .contact-info-upper-container a{
     font-size: small;
   }
-  #gridResponsive{
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  }
   
-  #contact,
-  footer {
-    height: 40vh;
-  }
   #profile {
     height: 83vh;
     margin-bottom: 0;
   }
   article {
     font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
   }
   .about-containers,
   .contact-info-upper-container,

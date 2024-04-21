@@ -33,27 +33,25 @@
       <div class="logo">Matías Martín</div>
       <div>
         <ul class="nav-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#clients" onclick="toggleMenu()">Clients</a></li>
-          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#techstack" onclick="toggleMenu()" style="white-space: nowrap;">Tech stack</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
+    <nav id="hamburger-nav" style="background-color: transparent">
       <div class="logo">Matías Martín</div>
-      <div class="hamburger-menu">
+      <div class="hamburger-menu" style="background-color: rgba(255, 255, 255, 0.534);">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <ul class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <ul class="menu-links" style="background-color: transparent; border-radius: 10px;">
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#clients" onclick="toggleMenu()">Clients</a></li>
-          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#techstack" onclick="toggleMenu()" style="white-space: nowrap;">Tech stack</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </ul>
       </div>
@@ -66,45 +64,37 @@
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Matías Martín</h1>
         <p class="section__text__p2" style="width: fit-content; margin: 1rem auto;" ><span id="webDevSpan">Web Developer</span></p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/CV_Matias_Martin.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='#contact'">
-            Contact Info
-          </button>
-        </div>
         <div id="socials-container">
           <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/matías-martín-0754b026b'"
+              src="./assets/linkedin.png"
+              alt="My LinkedIn profile"
+              class="icon"
+              onclick="window.open('https://www.linkedin.com/in/matías-martín-0754b026b', '_blank')"
           />
           <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/matiasmartin616'"
+              src="./assets/github.png"
+              alt="My Github profile"
+              class="icon"
+              onclick="window.open('https://github.com/matiasmartin616', '_blank')"
           />
-        </div>
+      </div>
       </div>
     </section>
-    <section id="projects" style="margin-top: 100px; display: flex; 
-    flex-direction: column;
-    height: fit-content;  ">
+    <section  id="projects" class="projectsClientsContainer" style="height: fit-content">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title" style="margin-bottom: 40px;">Projects</h1>
-      <div class="experience-details-container" >
-        <div id="gridResponsive" style="display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 500px));
-        justify-items: center;
-        justify-content: center;
-        gap: 20px;">
-          <div class="details-container color-container" style="max-width: 350px;">
+      <div id="gridResponsive" style="display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 350px));
+      justify-items: center;
+      justify-content: center;
+      gap: 20px;
+      align-items: stretch;
+        ">
+          <div class="details-container color-container" style="display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.534);">
             <div class="article-container">
               <img
                 src="./assets/project-1.webp"
@@ -125,7 +115,6 @@
                 Pass: 123456 
               </p>
               <br/>
-              <small><p>App is sleeping. Refresh if 502 error appears.</p></small>
             </div>
             <div class="btn-container">
               <a
@@ -146,63 +135,75 @@
               </a>
             </div>
           </div>
-          <div class="details-container color-container" style="max-width: 350px;">
-            <div class="article-container">
+          <div class="details-container color-container" style="display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.534);">
+            <div class="article-container" style="height: 160px; display: flex;  justify-content: center; align-items: center;">
               <img
-                src="./assets/project-2.webp"
-                alt="Project 1"
+                src="assets/TALLER-AMEZCUA-LOGO.webp"
+                alt="Client taller amezcua"
                 class="project-img"
-                style="height: 160px; align-self: center; justify-self: center;"
+                style=" align-self: center; justify-content: center; height:150px; width: 150px; border-radius: 100%; object-fit: cover;" 
               />
             </div>
-            <h2 class="experience-sub-title project-title">Film Society</h2>
-            <div style="text-align: left; margin-bottom: 20px;">
-              <p >
-                "Film Social Network" is a vibrant online community where movie enthusiasts from around the globe connect to share reviews, discover new films, and discuss all things cinema.
-              </p>
+            <div style="height: 100%;">
+              <h2 class="experience-sub-title project-title">Landing page</h2>
+              <div style="text-align: left; margin-bottom: 20px;">
+                <p >
+                  Developed a sleek, user-friendly landing page for TALLER AMEZCUA, enhancing their online presence with a focus on their specialized truck repair services
+                </p>
+                <br/>
+              </div>
             </div>
-            
             <div class="btn-container">
               <a
-                href=""
+                href="https://www.talleramezcua.es"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn-color-2 project-btn"
-                style="text-decoration: none;"
+                style="width: 90%;"
               >
-                💼 Work in progress 👨‍🏭
+                <strong>Visit website</strong>
+              </a>
+            </div>
+          </div>
+          <div class="details-container color-container" style="display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.534)">
+            <div class="article-container" style="height: 160px; display: flex;  justify-content: center; align-items: center;">
+              <img
+              src="assets/tarti-logo.jpeg"
+              alt="Client tarti tailored"
+                class="project-img"
+                style=" align-self: center; justify-content: center; height:140px; width: 140px; border-radius: 100%; object-fit: cover;" 
+              />
+            </div>
+            <div style="height: 100%;">
+              <h2 class="experience-sub-title project-title">Tarti Tailored <br> e-commerce</h2>
+              <div style="text-align: left; margin-bottom: 20px;">
+                <p class="mb-0">Developed a bespoke e-commerce platform for Tarti Tailored Brand, enhancing online shopping with a personalized user experience.</p>
+                <br/>
+              </div>
+            </div>
+            <div class="btn-container">
+              <a
+                href="https://tartitailored.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-color-2 project-btn"
+                style="width: 90%;"
+              >
+                <strong>Visit website</strong>
               </a>
             </div>
           </div>
         </div>
-      </div>
     </section>
-    <section id="clients" style="margin-top: 100px;">
-      <p class="section__text__p1">Success stories</p>
-      <h1 class="title" style="margin-bottom: 40px;">Clients</h1>
-      <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="owl-carousel testimonial-carousel position-relative" style=" max-width: 400px; margin: 0 auto;">
-                <div class="testimonial-item text-center">
-                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="assets/tarti-logo.jpeg" style="width: 180px; height: 180px;">
-                    <h5 class="mb-0">Tarti tailored</h5>
-                    <p>E-commerce</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Developed a bespoke e-commerce platform for Tarti Tailored Brand, enhancing online shopping with a personalized user experience.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="assets/TALLER-AMEZCUA-LOGO.webp" style="width: 180px; height: 180px;">
-                    <h5 class="mb-0">Taller Amezcua</h5>
-                    <p>Landing page</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Developed a sleek, user-friendly landing page for TALLER AMEZCUA, enhancing their online presence with a focus on their specialized truck repair services</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </section>
+    
     <section id="about" style="
         margin-top: 100px; 
         height: fit-content; 
@@ -215,18 +216,18 @@
       <p class="section__text__p1" style="display: block;">Get To Know More</p>
       <h1 class="title" style="margin-bottom: 40px; display: block;">About Me</h1>
       <div class="section-container" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-        <div class="text-container" style="width: 70vw; max-width: 500px; background-color: rgba(255, 255, 255, 0.781); border-radius: 8px;">
-          <p style="line-height: 30px; margin: 0; ">
+        <div class="text-container" style="width: 70vw; max-width: 500px; background-color: #fff6e1; border-radius: 8px; text-align: left;">
+          <p style="line-height: 30px; margin: 0; background-color: rgba(255, 255, 255, 0.534);">
             Passionate 🖥️ Software Developer, particularly skilled in JavaScript and PHP. I have been delving into the world of technology and programming since 2013. Education from a bilingual school (2003-2018),  I view myself as a versatile individual, passionately committed to leveraging technology for the betterment of others.
           </p>
         </div>
-        <div class="about-details-container" style="width: 80%; margin: 0 auto;">
+        <div class="about-details-container" style="width: 98%; margin: 0 auto;">
           <div id="gridResponsive" class="about-containers" style="
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(150px, 400px));
           gap: 20px;
           justify-items: center;">
-            <div class="details-container" style="min-width: 300px; max-width: 350px; background-color:rgba(255, 255, 255, 0.534);">
+            <div class="details-container" id="experienceContainer" style="min-width: 300px; max-width: 350px; background-color:rgba(255, 255, 255, 0.534);">
               <img
                 src="./assets/experience.png"
                 alt="Experience icon"
@@ -256,7 +257,7 @@
                   </small></p>
               </div>
             </div>
-            <div class="details-container" style="min-width: 300px; max-width: 350px; background-color:rgba(255, 255, 255, 0.534);">
+            <div class="details-container" id="educationContainer" style="min-width: 300px; max-width: 350px; background-color:rgba(255, 255, 255, 0.534);">
               <img
                 src="./assets/education.png"
                 alt="Education icon"
@@ -289,15 +290,15 @@
       </div>
     </section>
     
-    <section id="skills" style="height: fit-content;">
+    <section id="techstack" style="margin-top: 100px;height: fit-content;">
       <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
+      <h1 class="title">Tech stack</h1>
       <div class="experience-details-container">
         <div class="about-containers">
-          <div class="details-container">
+          <div class="details-container" style="background-color: rgba(255, 255, 255, 0.534);">
             <h2 class="experience-sub-title">Frontend Development </h2>
             <div class="article-container">
-              <article>
+              <article >
                 <img
                   src="./assets/checkmark.png"
                   alt="Skills icon"
@@ -349,7 +350,7 @@
                 />
                 <div>
                   <h3>TypeScript</h3>
-                  <p>Basic</p>
+                  <p>Intermediate</p>
                 </div>
               </article>
               <article>
@@ -365,7 +366,7 @@
               </article>
             </div>
           </div>
-          <div class="details-container" >
+          <div class="details-container" style="background-color: rgba(255, 255, 255, 0.534);" >
             <h2 class="experience-sub-title">Backend Development</h2>
             <div class="article-container">
               <article>
@@ -401,77 +402,27 @@
                   <p>Intermediate</p>
                 </div>
               </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Ubuntu server</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
             </div>
           </div>
           
         </div>
-        <div class="details-container">
-          <h2 class="experience-sub-title">General skills </h2>
-          <div class="article-container" id="generalSkills" >
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Skills icon"
-                class="icon"
-              />
-              <div>
-                <h3>Polyvalence</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Professionalism</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Agile Kanban</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Organized</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article style="min-width: fit-content;">
-              <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Analyze client requirements</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-          </div>
-        </div>
       </div>
     </section>
-    
     <section id="contact" style="margin-top: 80px; height: fit-content;">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container" style="justify-content: start; gap:20px" >
+      <div class="contact-info-upper-container" style="justify-content: start; gap:20px; background-color: rgba(255, 255, 255, 0.534);" >
         <div class="contact-info-container" style="padding: 10px;">
           <img
             src="./assets/email.png"
@@ -490,19 +441,8 @@
         </div>
       </div>
     </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="#clients" onclick="toggleMenu()">Clients</a></li>
-            <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2023 Matías Martín. All Rights Reserved.</p>
+    <footer style="background-color: rgba(207, 202, 167, 0.459);">
+      <p style="line-height: 40px;  margin: 0; font-size: small;">Copyright &#169; 2024 Matías Martín. All Rights Reserved.</p>
     </footer>
     
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

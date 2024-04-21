@@ -10,6 +10,7 @@
 body {
   font-family: "Poppins", sans-serif !important;
   color: rgb(22, 22, 22) !important;
+  background-color: #fff6e1;
 }
 
 html {
@@ -232,41 +233,6 @@ section > p {
   gap: 1rem;
 }
 
-/* CLIENTS */
-.testimonial-carousel .owl-item .testimonial-text,
-.testimonial-carousel .owl-item.center .testimonial-text * {
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-item.center .testimonial-text {
-    background: rgb(54, 54, 54) !important;
-}
-
-.testimonial-carousel .owl-item.center .testimonial-text * {
-    color: #FFFFFF !important;
-}
-
-.testimonial-carousel .owl-dots {
-    margin-top: 24px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.testimonial-carousel .owl-dot {
-    position: relative;
-    display: inline-block;
-    margin: 0 5px;
-    width: 15px;
-    height: 15px;
-    border: 1px solid #CCCCCC;
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-dot.active {
-    background: rgb(54, 54, 54);
-    border-color: rgb(54, 54, 54);
-}
 
 /* ICONS */
 
@@ -388,7 +354,14 @@ section > p {
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
-
+#gridResponsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 350px));
+  justify-items: center;
+  justify-content: center;
+  gap: 20px;
+  align-items: stretch; /* Asegura que todos los children se estiren verticalmente */
+}
 .experience-details-container {
   display: flex;
   justify-content: center;
@@ -422,7 +395,6 @@ article {
 article .icon {
   cursor: default;
 }
-
 /* PROJECTS SECTION */
 
 #projects {
@@ -493,10 +465,10 @@ article .icon {
 /* FOOTER SECTION */
 
 footer {
-  height: 26vh;
-  margin: 0 1rem;
+  height: fit-content;
 }
 
 footer p {
   text-align: center;
 }
+
